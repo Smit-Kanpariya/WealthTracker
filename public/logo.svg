@@ -1,0 +1,56 @@
+<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle for logo mark -->
+  <circle cx="40" cy="40" r="30" fill="url(#logoGradient)" opacity="0.1"/>
+  
+  <!-- Main logo symbol - stylized W with financial chart elements -->
+  <g transform="translate(20, 20)">
+    <!-- Chart bars integrated into W shape -->
+    <rect x="5" y="25" width="3" height="15" fill="url(#accentGradient)" rx="1.5"/>
+    <rect x="10" y="20" width="3" height="20" fill="url(#accentGradient)" rx="1.5"/>
+    <rect x="15" y="15" width="3" height="25" fill="url(#accentGradient)" rx="1.5"/>
+    <rect x="20" y="18" width="3" height="22" fill="url(#accentGradient)" rx="1.5"/>
+    <rect x="25" y="12" width="3" height="28" fill="url(#accentGradient)" rx="1.5"/>
+    <rect x="30" y="20" width="3" height="20" fill="url(#accentGradient)" rx="1.5"/>
+    <rect x="35" y="25" width="3" height="15" fill="url(#accentGradient)" rx="1.5"/>
+    
+    <!-- Stylized 'W' overlay -->
+    <path d="M8 35 L12 15 L16 30 L20 10 L24 35 L28 15 L32 35" 
+          stroke="url(#logoGradient)" 
+          stroke-width="2.5" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- AI circuit pattern -->
+    <circle cx="35" cy="12" r="2" fill="url(#logoGradient)"/>
+    <circle cx="30" cy="8" r="1.5" fill="url(#accentGradient)"/>
+    <line x1="33" y1="10" x2="37" y2="14" stroke="url(#logoGradient)" stroke-width="1"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="85" y="32" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" 
+        font-size="22" font-weight="700" fill="url(#logoGradient)">
+    Wealth
+  </text>
+  <text x="85" y="52" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" 
+        font-size="22" font-weight="300" fill="#64748B">
+    Tracker
+  </text>
+  
+  <!-- Tagline -->
+  <text x="85" y="65" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" 
+        font-size="9" font-weight="400" fill="#94A3B8" letter-spacing="0.5px">
+    AI-POWERED FINANCIAL INTELLIGENCE
+  </text>
+</svg>

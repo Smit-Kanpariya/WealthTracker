@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
 }
 
 html {
@@ -12,52 +13,53 @@ html {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 30%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --blue-accent: 214 100% 50%;
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
     --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 30%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -72,15 +74,123 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    background: #fff !important;
+    min-height: 100vh;
   }
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+.text-blue-900 {
+  color: #1e3a8a !important;
+}
+.text-blue-700 {
+  color: #1d4ed8 !important;
+}
+.text-gray-700 {
+  color: #374151 !important;
+}
+.text-white {
+  color: #fff !important;
+}
+.text-black {
+  color: #000 !important;
+}
+
+.bg-blue-50 {
+  background-color: #eff6ff !important;
+}
+
+/* Robotic Grid Background */
+.robotic-grid {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: relative;
+}
+
+.robotic-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.02) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
 }
 
 @layer utilities {
   .gradient {
-    @apply bg-gradient-to-br from-blue-600 to-purple-600;
+    @apply bg-gradient-to-r from-white via-gray-200 to-white;
   }
+
   .gradient-title {
-    @apply gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
+    background: linear-gradient(
+      90deg,
+      #2563eb 0%,
+      #1e40af 40%,
+      #0ea5e9 70%,
+      #1e3a8a 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease-in-out infinite;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: transparent !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 2px 8px rgba(30, 58, 138, 0.04);
+  }
+
+  .blue-accent {
+    color: hsl(var(--blue-accent));
+  }
+
+  .blue-accent-bg {
+    background-color: hsl(var(--blue-accent));
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+
+  .glow-white {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .border-glow {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .cyber-border {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .cyber-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      transparent,
+      rgba(255, 255, 255, 0.1)
+    );
+    border-radius: inherit;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
   }
 }
 
@@ -89,14 +199,32 @@ html {
 }
 
 .hero-image {
-  /* transform: rotateX(20deg) scale(0.9) translateY(-50); */
   transform: rotateX(15deg) scale(1);
   transition: transform 0.5s ease-out;
   will-change: transform;
+  filter: contrast(1.1) brightness(0.9);
 }
 
 .hero-image.scrolled {
   transform: rotateX(0deg) scale(1) translateY(40px);
+}
+
+.hero-image img {
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes gradientMove {
@@ -111,8 +239,147 @@ html {
   }
 }
 
-/* Add this class */
+/* Robotic text effects */
+.robotic-text {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  letter-spacing: 0.5px;
+}
+
+.circuit-lines {
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 50%
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.1) 50%, transparent 50%);
+  background-size: 20px 20px;
+}
+
+/* Glitch effect for hero title */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.glitch-text::before {
+  animation: glitch-1 2.8s infinite linear alternate-reverse;
+  color: rgba(59, 130, 246, 0.9);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.glitch-text::after {
+  animation: glitch-2 2.8s infinite linear alternate;
+  color: #67e8f9;
+  z-index: -2;
+  opacity: 0.7;
+}
+
+@keyframes glitch-1 {
+  0%, 7%, 93%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-2px, 1px);
+  }
+  13% {
+    transform: translate(2px, -1px);
+  }
+  25% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, 1px);
+  }
+  60% {
+    transform: translate(-1px, -2px);
+  }
+  80% {
+    transform: translate(1px, 2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 12%, 88%, 100% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(2px, -1px);
+  }
+  30% {
+    transform: translate(-2px, 1px);
+  }
+  55% {
+    transform: translate(1px, 2px);
+  }
+  70% {
+    transform: translate(-1px, -2px);
+  }
+}
+
+/* Animate gradient */
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradientMove 3s ease infinite;
+}
+
+/* Smooth animated gradient for hero heading */
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradientMoveHero 6s ease-in-out infinite;
+}
+
+@keyframes gradientMoveHero {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Scanning line effect */
+.scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: scan 3s infinite;
+}
+
+@keyframes scan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
