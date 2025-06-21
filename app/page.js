@@ -44,7 +44,16 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-title animate-gradient-move">
-              Everything you need to manage your finances
+              <span
+                style={{
+                  marginBottom: "0.5rem",
+                  paddingBottom: "0.5rem",
+                  overflow: "visible",
+                  display: "inline-block",
+                }}
+              >
+                Everything you need to manage your finances
+              </span>
             </h2>
             <div className="w-24 h-1 blue-accent-bg mx-auto rounded-full glow-blue"></div>
           </div>

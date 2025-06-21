@@ -14,14 +14,14 @@ const Header = async () => {
       className="fixed top-0 w-full bg-white backdrop-blur-md z-50 border-b border-blue-100 cyber-border"
       style={{ zIndex: 9999 }}
     >
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="container mx-auto px-4 py-2 flex items-center justify-between">
         <Link href="/" className="relative z-10">
           <Image
             src={"/logo.png"}
             alt="WealthTracker Logo"
-            width={400}
-            height={120}
-            className="h-20 w-auto object-contain cursor-pointer"
+            width={580}
+            height={150}
+            className="max-h-16 w-auto object-contain cursor-pointer scale-150"
           />
         </Link>
 
