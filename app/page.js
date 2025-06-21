@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,6 +13,7 @@ import HeroSection from "@/components/hero";
 import Link from "next/link";
 
 const LandingPage = () => {
+  const [hoveredIndex, setHoveredIndex] = React.useState(null);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -61,22 +63,32 @@ const LandingPage = () => {
             {featuresData.map((feature, index) => (
               <Card
                 key={index}
-                className={`group bg-white border-glow shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden hover:scale-105 hover:glow-blue relative cyber-border ${
+                className={`group bg-white border-glow shadow-xl transition-all duration-500 rounded-2xl overflow-hidden hover:scale-105 relative cyber-border ${
                   feature.title === "Smart Receipt Scanner"
-                    ? "ring-2 ring-blue-500/30 ring-offset-2 ring-offset-white shadow-2xl shadow-blue-500/20"
+                    ? "ring-2 ring-blue-500/30 ring-offset-2 ring-offset-white shadow-blue-500/20"
                     : ""
                 }`}
-                style={
-                  feature.title === "Smart Receipt Scanner"
+                style={{
+                  ...(feature.title === "Smart Receipt Scanner"
                     ? {
                         background:
                           "linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(147, 197, 253, 0.05) 50%, rgba(59, 130, 246, 0.03) 100%)",
                         boxShadow:
-                          "0 25px 50px -12px rgba(59, 130, 246, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.1)",
+                          hoveredIndex === index
+                            ? "0 8px 32px 0 rgba(56, 189, 248, 0.35), 0 1.5px 3px 0 rgba(56, 189, 248, 0.10)"
+                            : "0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1)",
                         animation: "pulse 3s ease-in-out infinite",
                       }
-                    : {}
-                }
+                    : {
+                        boxShadow:
+                          hoveredIndex === index
+                            ? "0 8px 32px 0 rgba(56, 189, 248, 0.35), 0 1.5px 3px 0 rgba(56, 189, 248, 0.10)"
+                            : "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05)",
+                      }),
+                  transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)"
+                }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Enhanced scan line for receipt scanner */}
                 <div
