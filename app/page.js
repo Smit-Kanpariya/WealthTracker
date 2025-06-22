@@ -334,11 +334,13 @@ const LandingPage = () => {
             </h2>
             <p className="text-gray-300 mb-12 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
               Join thousands of users who are already managing their finances
-              smarter with{" "}
+              more intelligently with{" "}
               <span className="font-bold text-white robotic-text">
                 WealthTracker.io
               </span>
+              .
             </p>
+
             <Link href="/dashboard">
               <Button
                 size="lg"
