@@ -321,7 +321,10 @@ const LandingPage = () => {
           <div className="data-stream"></div>
         </div>
         <div className="robotic-footer-container">
-          <div className="robotic-footer-content text-center">
+          <div
+            className="robotic-footer-content text-center"
+            style={{ marginBottom: 0, paddingBottom: 0 }}
+          >
             <h2
               className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight glitch-text robotic-text"
               data-text="Ready to Take Control of Your Finances?"
@@ -348,7 +351,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      still
     </div>
   );
 };
