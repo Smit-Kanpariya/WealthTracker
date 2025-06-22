@@ -85,7 +85,7 @@ const LandingPage = () => {
                             ? "0 8px 32px 0 rgba(56, 189, 248, 0.35), 0 1.5px 3px 0 rgba(56, 189, 248, 0.10)"
                             : "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05)",
                       }),
-                  transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)"
+                  transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -312,38 +312,44 @@ const LandingPage = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-24 bg-black relative overflow-hidden robotic-grid">
-        <div className="absolute inset-0 circuit-lines opacity-30"></div>
-        <div className="absolute top-10 left-10 w-20 h-20 glow-white rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 glow-blue rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 glow-white rounded-full blur-3xl opacity-10"></div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2
-            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight glitch-text robotic-text"
-            data-text="Ready to Take Control of Your Finances?"
-          >
-            Ready to Take Control of Your{" "}
-            <span className="blue-accent">Finances?</span>
-          </h2>
-          <p className="text-gray-300 mb-12 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
-            Join thousands of users who are already managing their finances
-            smarter with{" "}
-            <span className="font-bold text-white robotic-text">
-              WealthTracker.io
-            </span>
-          </p>
-          <Link href="/dashboard">
-            <Button
-              size="lg"
-              className="blue-accent-bg text-white hover:bg-blue-600 font-bold px-12 py-4 text-lg rounded-full glow-blue hover:glow-white transform hover:scale-105 transition-all duration-300 border-glow cyber-border robotic-text scan-line"
+      <section className="robotic-footer">
+        <div className="robotic-floating-elements">
+          <div className="robotic-circuit-node"></div>
+          <div className="robotic-circuit-node"></div>
+          <div className="robotic-circuit-node"></div>
+          <div className="robotic-circuit-node"></div>
+        </div>
+        <div className="robotic-data-streams">
+          <div className="data-stream"></div>
+          <div className="data-stream"></div>
+          <div className="data-stream"></div>
+          <div className="data-stream"></div>
+        </div>
+        <div className="robotic-footer-container">
+          <div className="robotic-footer-content text-center">
+            <h2
+              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight glitch-text robotic-text"
+              data-text="Ready to Take Control of Your Finances?"
             >
-              START FREE TRIAL
-              <span className="ml-2 text-xl">→</span>
-            </Button>
-          </Link>
-          <div className="mt-8 text-gray-400 text-sm robotic-text">
-            No credit card required
+              Ready to Take Control of Your{" "}
+              <span className="blue-accent">Finances?</span>
+            </h2>
+            <p className="text-gray-300 mb-12 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
+              Join thousands of users who are already managing their finances
+              smarter with{" "}
+              <span className="font-bold text-white robotic-text">
+                WealthTracker.io
+              </span>
+            </p>
+            <Link href="/dashboard">
+              <Button
+                size="lg"
+                className="blue-accent-bg text-white hover:bg-blue-600 font-bold px-12 py-4 text-lg rounded-full glow-blue hover:glow-white transform hover:scale-105 transition-all duration-300 border-glow cyber-border robotic-text scan-line"
+              >
+                START FREE TRIAL
+                <span className="ml-2 text-xl">→</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

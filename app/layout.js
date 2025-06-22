@@ -23,9 +23,34 @@ export default function RootLayout({ children }) {
           <main className="min-h-screen">{children}</main>
           <Toaster richColors />
 
-          <footer className="bg-blue-50 py-12">
-            <div className="container mx-auto px-4 text-center text-gray-600">
-              <p>Made with 💗 by Smit Kanpariya</p>
+          <footer className="robotic-footer">
+            <div className="robotic-floating-elements">
+              <div className="robotic-circuit-node"></div>
+              <div className="robotic-circuit-node"></div>
+              <div className="robotic-circuit-node"></div>
+              <div className="robotic-circuit-node"></div>
+            </div>
+
+            <div className="robotic-data-streams">
+              <div className="data-stream"></div>
+              <div className="data-stream"></div>
+              <div className="data-stream"></div>
+              <div className="data-stream"></div>
+            </div>
+
+            <div className="robotic-footer-container">
+              <div className="robotic-footer-content">
+                <div className="robotic-logo-section">
+                  <div className="robotic-logo">SK</div>
+                  <div className="robotic-brand-text">Smit Kanpariya</div>
+                </div>
+                <div className="robotic-made-with-love">
+                  <div className="robotic-love-text">
+                    Made with <span className="robotic-heart">💗</span> by Smit
+                    Kanpariya
+                  </div>
+                </div>
+              </div>
             </div>
           </footer>
         </body>
