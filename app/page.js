@@ -18,7 +18,6 @@ const LandingPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSection />
-
       {/* Stats Section */}
       <section className="py-24 bg-blue-50 relative overflow-hidden robotic-grid">
         <div className="absolute inset-0 scan-line"></div>
@@ -40,7 +39,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section id="features" className="py-24 bg-white relative circuit-lines">
         <div className="container mx-auto px-4 relative z-10">
@@ -218,7 +216,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
       {/* How It Works Section */}
       <section className="py-24 bg-blue-50 relative overflow-hidden robotic-grid">
         <div className="absolute top-10 left-10 w-20 h-20 glow-white rounded-full blur-xl"></div>
@@ -255,7 +252,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section
         id="testimonials"
@@ -310,7 +306,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
       {/* Enhanced CTA Section */}
       <section className="robotic-footer">
         <div className="robotic-floating-elements">
@@ -353,6 +348,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      still
     </div>
   );
 };
