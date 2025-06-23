@@ -294,7 +294,7 @@ const LandingPage = () => {
                   </div>
                   <div className="relative">
                     <div className="blue-accent text-4xl opacity-20 absolute -top-2 -left-2">
-                      "
+                      &quot;
                     </div>
                     <p className="text-gray-700 leading-relaxed relative z-10 italic">
                       {testimonial.quote}
