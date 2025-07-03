@@ -6,6 +6,8 @@ A comprehensive Full Stack AI-powered Finance Platform built with modern web tec
 
 ## ✨ Features
 
+LIVE DEMO : https://yourwealthtracker.vercel.app/
+
 ### 🤖 AI-Powered Insights
 
 - **Smart Financial Analysis**: Get personalized recommendations based on your spending patterns
