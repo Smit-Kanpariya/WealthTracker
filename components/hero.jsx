@@ -125,7 +125,11 @@ const HeroSection = () => {
               </svg>
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/">
+          <Link
+            href="https://youtu.be/zoBYduUfyWs?si=TI2LXO9JIosxFrlw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               size="lg"
               variant="outline"

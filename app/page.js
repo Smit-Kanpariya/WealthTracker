@@ -336,7 +336,7 @@ const LandingPage = () => {
               Join thousands of users who are already managing their finances
               more intelligently with{" "}
               <span className="font-bold text-white robotic-text">
-                WealthTracker.io
+                WealthTracker
               </span>
               .
             </p>
