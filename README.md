@@ -53,26 +53,6 @@ A comprehensive Full Stack AI-powered Finance Platform built with modern web tec
 - **[ArcJet](https://arcjet.com/)** - Rate limiting and security protection
 - **[NextAuth.js](https://next-auth.js.org/)** - Authentication solution
 
-## 📁 Project Structure
-
-WealthTracker/
-├── app/ # Next.js App Router
-│ ├── (auth)/ # Authentication pages
-│ ├── (dashboard)/ # Main application pages
-│ ├── api/ # API routes
-│ └── globals.css # Global styles
-├── components/ # Reusable UI components
-│ ├── ui/ # Shadcn UI components
-│ ├── charts/ # Chart components
-│ └── forms/ # Form components
-├── lib/ # Utility functions
-│ ├── db.ts # Database connection
-│ ├── auth.ts # Authentication config
-│ └── utils.ts # Helper functions
-├── prisma/ # Database schema and migrations
-├── public/ # Static assets
-└── types/ # TypeScript type definitions
-
 ## 🔧 Configuration
 
 ### Database Schema
